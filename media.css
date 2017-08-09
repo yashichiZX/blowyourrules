@@ -9,6 +9,7 @@
 */
 
 /*グローバルナビ*/
+
 #main_stage div ul {
 	list-style-type: none;
     padding: 0;
@@ -70,6 +71,34 @@
     margin-top: 0;
 }
 
+#text_magazine {
+    max-width: 100%;
+}
+
+#text_magazine div #magazine_img {
+    width: 100%;
+}
+
+#text_magazine div #magazine_img #flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+#text_magazine div #magazine_img #flex #magazine_title {
+    margin-top: 60px;
+}
+
+#text_magazine div #magazine_img #flex .left_img {
+    width: 30%;
+    height: 100%
+}
+#text_magazine div #magazine_img #flex .centre_img {
+    width: 30%;
+    height: 100%
+}
+#text_magazine div #magazine_img .right_img {
+    max-width: 100%;
+}
 
 /*
 ------------------

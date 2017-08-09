@@ -12,23 +12,27 @@
 <section id="main_stage">
 	<div>
 		<h1>Responsive</h1>
-		<ul>
+		<ul style="display: none;">
 			<li>About</li>
 			<li>1</li>
 			<li>2</li>
 			<li>3</li>
 		</ul>
-		<!-- slide up/down -->
+		<!-- スマホ(グローバルナビの表示の有無によってslideUp or Down) -->
 		<script type="text/javascript">
-			$(function(){
-				$('#main_stage h1').click(function(){
-					if ($('#main_stage ul').css('display') == 'none') {
-						$('#main_stage ul').slideDown('normal');
-					}else{
-						$('#main_stage ul').slideUp('normal');
-					}
-				});
-			})
+			$(function() {
+			$('#main_stage h1').click(function(){
+				if ($('#main_stage ul').hasClass('active') == false) {
+					$('#main_stage ul').slideDown('normal', function(){
+						$(this).addClass('active');
+					});
+				} else {
+					$('#main_stage ul').slideUp('normal', function(){
+						$(this).removeClass('active');
+					});
+				} 
+			});
+		})
 		</script>
 		<img src="media/jake-melara-1407.jpg">
 	</div>
@@ -39,6 +43,25 @@
 		<p>Insane Dream</p>
 		<h2></h2>
 		<h1></h1>
+	</div>
+</section>
+<section id="text_magazine">
+	<div>
+		<div id="magazine_img">
+			<div id="flex">
+				<img class="left_img" src="media/pig.png">
+				<p id="magazine_title">August 9, 2017</p>
+				<img class="centre_img" src="media/rabbit.png">
+			</div>
+			<!-- ここからカラム落ちさせる -->
+			<img class="right_img" src="media/greg-kantra-333822.jpg">
+		</div>
+		<p class="magazine_content">
+			There is an apple next to you. <br>
+			The apple is hotter than your heart.<br>
+			You, in front of me, are going to have lunch.<br>
+			Which one do you take?
+		</p>
 	</div>
 </section>
 </body>
